@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+body{
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+
+    
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+   background-color: rgb(104, 126, 146);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: inset 1px 2px 10px rgba(8, 241, 43, 0.8), -1px -2px 10px rgba(42, 234, 8, 0.8);
+
+
+}
+.num{
+    color: aliceblue;
+    inset: 20px;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg*var(--v)));
+}
+.num b{
+    transform: rotate(calc(-30deg*var(--v)));
+    display: inline-block;
+   
+
+}
+.dot{
+    height: 8%;
+    width: 8%;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8), -1px -2px 10 px rgba(0,0,0,0.8);
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 2;
+
+
+}
+.digi-clock{
+    width: 40%;
+    height: 10%;
+    background-color: black;
+    position: absolute;
+    bottom: 30%;
+    background: transparent;
+    box-shadow: inset 1px 2px 10px rgba(0,0,0,0.8), -1px -2px 10px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    font-size: 17px;
+    color: aliceblue;
+}
+.dh{
+    color: rgb(27, 187, 190);
+}
+.dm{
+    color: rgb(9, 233, 125);
+}
+.ds{
+    color: rgb(245, 8, 166);
+
+}
+.hour-hand,.min-hand,.sec-hand{
+    position: absolute;
+    background-color: #000;
+    border-radius: 20px;
+    transform-origin: bottom;
+   
+
+}
+.hour-hand{
+    width: 1%;
+    height: 28%;
+    top: 20.5%;
+    background-color:  rgb(4, 240, 244);
+   
+}
+.min-hand{
+    width: 1.5%;
+    height: 35%;
+    top: 15.5%;
+    background-color: rgb(10, 244, 80) ;
+   
+}
+.sec-hand{
+    width: 1%;
+    height: 32%;
+    top: 15.5%;
+    background-color:  rgb(247, 4, 121) ;
+  
+ 
+   
+}
+.Z{
+    color: white;
+    font-size: 20px;
+}
+@media (max-width:760px;){
+    .clock{
+        width: 80vw;
+        height: 80vh;
+        position: relative;
+       
+    }
+   }
+
+
+@media (max-width:760px){
+    .digi-clock{
+        font-size: 2vw;
+    }
+    .num b{
+        font-size: 5vw;
+
+    }
+}   
